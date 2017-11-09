@@ -15,6 +15,6 @@ The output contains the name, student id and account separated by tab spaces, as
 
 ```
 percy@xps:atendance$ cat 20171109
-James Watso 	1234455 	mr80
+James Watso 	1234455 	jw23
 ```
 
