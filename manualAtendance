@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# This is a script to register manually, the atendance of students which ID card can not be registered by the CS1002 card scanner.
+# By: @percyperezd
+#     percycperezdante.github.io
+
+clear
+echo -e "\x1b[60;44m Manaul attendance \x1b[m"
+echo
+read -p "Enter your Full Name " name
+read -p "Student ID " id
+read -p "User account " account
+
+echo -e "\nYou typed:"
+echo -e "\n\e[31m "$name"\t"$id"\t"$account" \e[0m"
+echo -e "\n"
+read -p "OK y/n ? " confirm
+echo -e `date`", You typed "$confirm
+
+outputFile=`date +%Y%m%d`
+
+if [ ! -f $outputFile ]
+then
+    cat /dev/null > $outputFile
+fi
+
+if [ ${confirm} = "y" ]
+then
+    echo -e $name"\t"$id"\t"$account >> $outputFile
+else
+	echo -e "\nAttendance not registered"
+fi
+echo -e "\nExit"
