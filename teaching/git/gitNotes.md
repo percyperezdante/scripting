@@ -2,24 +2,31 @@
 
 # 1.- TAGS
 
-# Creating annotated tags
+### Creating annotated tags
 
 ```
 $ git tag -a v2.3.1 -m "Your comment in here"
 ```
 
-# Sharing annotated tags
+### Sharing annotated tags
 
 ```
-// Commit the source code to the central repository
+// First: commit and push the modifications of source code to the central repository
 
-$ git push orign v2.3.1
+$ git tag -a v2.3.3 -m "Your comment in here"
+$ git push orign v2.3.3
 ```
 
-# Listing anntated tags
+To share all tags with one command lini
 
 ```
-$ git show
-$ git show v2.3.*
+$ git push orign --tags
+```
+### Listing anntated tags
 
 ```
+$ git show    # It list all available tags
+$ git show v2.3.*  # It list all tags which prefix is v2.3
+
+```
+
