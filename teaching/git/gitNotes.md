@@ -30,3 +30,24 @@ $ git show v2.3.*  # It list all tags which prefix is v2.3
 
 ```
 
+### Push a file to an existing tag
+
+First push the file to the remote repository
+
+Second remove the existing tag locally and remotelly
+```
+$ git tag -d v.2.3
+$ git push origin :v2.3
+```
+
+Thrid create the same tag and push it to the remote repo
+```
+$ git tag -a v2.3
+$ git push origin v2.3
+```
+
+Reference: [https://gist.github.com/danielestevez/2044589](https://gist.github.com/danielestevez/2044589)
+
+
+
+
