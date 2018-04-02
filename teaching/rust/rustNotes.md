@@ -1,4 +1,4 @@
-#RUST
+# RUST
 
 ### Hello world examples
 
