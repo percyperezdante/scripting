@@ -1,0 +1,6 @@
+[package]
+name = "hiCargo"
+version = "0.1.0"
+authors = ["percyperezdante@gmail.com <percyperezdante@gmail.com>"]
+
+[dependencies]

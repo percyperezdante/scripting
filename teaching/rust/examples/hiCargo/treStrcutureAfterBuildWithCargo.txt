@@ -1,0 +1,45 @@
+Cargo.lock [error opening dir]
+Cargo.toml [error opening dir]
+src
+└── main.rs
+target
+├── debug
+│   ├── build
+│   ├── deps
+│   │   ├── hiCargo-038c009dd11d16b1
+│   │   ├── hiCargo-038c009dd11d16b1.d
+│   │   └── hiCargo-f7751d76bbcccc9d.d
+│   ├── examples
+│   ├── hiCargo
+│   ├── hiCargo.d
+│   ├── incremental
+│   │   ├── hiCargo-2sb67g0i81qot
+│   │   │   ├── s-ezqvfq6808-1fvxv6b-1p93z8dkwkx5w
+│   │   │   │   ├── 1y16o1qfye96o7m0.o
+│   │   │   │   ├── 3rngp6bm2u2q5z0y.o
+│   │   │   │   ├── 3zvl0xo94hg2izlk.o
+│   │   │   │   ├── 4xq48u46a1pwiqn7.o
+│   │   │   │   ├── dep-graph.bin
+│   │   │   │   ├── query-cache.bin
+│   │   │   │   └── work-products.bin
+│   │   │   └── s-ezqvfq6808-1fvxv6b.lock
+│   │   └── hiCargo-zo9023b5j6g4
+│   │       ├── s-ezqvway35z-ypggyc-19bm052fln41k
+│   │       │   ├── dep-graph.bin
+│   │       │   ├── query-cache.bin
+│   │       │   └── work-products.bin
+│   │       └── s-ezqvway35z-ypggyc.lock
+│   ├── libhiCargo.d
+│   └── native
+└── release
+    ├── build
+    ├── deps
+    │   ├── hiCargo-358910854939e17b
+    │   └── hiCargo-358910854939e17b.d
+    ├── examples
+    ├── hiCargo
+    ├── hiCargo.d
+    ├── incremental
+    └── native
+
+16 directories, 23 files
