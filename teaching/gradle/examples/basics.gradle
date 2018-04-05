@@ -1,0 +1,22 @@
+task hello {
+	println 'hi'
+}
+
+// An action named doLast is almost self-expressive. It’s
+// the last action that’s executed for a task
+task last{
+	println "First action"
+	doLast{
+		println "Last action"
+	}
+}
+
+//  Definition of function
+def func1(){
+	println "this is the function one"
+}
+
+task callf{
+	func1()
+}
+
