@@ -1,4 +1,4 @@
-#Linux based possible interview questions
+# Linux based possible interview questions
 
 The following questions were collected from differnt sources listed in the referene section.
 
