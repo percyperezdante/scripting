@@ -82,8 +82,9 @@ _, diff := addAndSubtraction(2,3)  // sum is discarted
 
 - Packages: fmt, bufio
 
+```
   var answer string
   fmt.Scanln(&answer) // Go passes variables by value, requires pointers
   fmt.Printf(" you typed %d \n", answer)
-
+```
 
