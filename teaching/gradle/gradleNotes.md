@@ -13,3 +13,7 @@
 
 > Excluding a task from execution
 
+> Updating dependencies 
+```
+$ gradle --refresh-dependencies
+```
