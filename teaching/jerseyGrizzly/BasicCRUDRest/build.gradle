@@ -1,0 +1,53 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'groovy'
+
+mainClassName =  'basiccrudrest.BasicCRUDRest'
+repositories {
+    jcenter()
+}
+jar{
+	baseName = 'BasicCRUDRest'
+	version = '0.1.1'
+	manifest{
+		attributes 'Main-Class': 'BasicCRUDRest'
+	}
+}
+			  
+task superJar(type: Jar ){
+	baseName = 'BasicCRUDRest.super'
+	version = '0.1.1'
+	manifest{
+		attributes 'Main-Class': 'BasicCRUDRest'
+	}
+	from{
+		configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+	}
+	with jar
+}
+
+dependencies {
+	compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.4.9' 
+	testCompile 'org.spockframework:spock-core:1.1-groovy-2.4-rc-4' 
+	testCompile group: 'com.athaydes', name: 'spock-reports', version: '1.3.2'
+
+    // Jersey and Grizzly dependencies
+	compile group: 'org.glassfish.grizzly', name: 'grizzly-http-server-jaxws', version: '2.4.3'
+	compile group: 'org.glassfish.jersey.inject', name: 'jersey-hk2', version: '2.27'
+	compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-grizzly2-http', version: '2.27'
+
+}
+
+task report(type:Exec){
+	commandLine "sh ","DisplayTestReport.spock"    
+}
+/*
+Ways to run
+gradle jar
+gradle  build
+gradle clean build
+gradle clean test
+gradle clean test 
+gradle --continue clean test report
+
+*/
