@@ -41,12 +41,15 @@ public class Rest {
 			return counter;
 		}
 
+		// This method does not set the counter
+		// It shos only the use of Response
 		@POST
 		@Produces(MediaType.TEXT_PLAIN)
 		@Path("/sp")
 		public Response setSpIt(
 								@FormParam("value") int value){
-			System.out.println(value + "ESPCIAL POST"+counter);
+		
+			System.out.println(value + "ESPCIAL POST "+counter);
 			Response r = Response.status(200).entity("Compelted "+ value).build();
 			return r;
 		}

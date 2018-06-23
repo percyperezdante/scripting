@@ -10,10 +10,14 @@ import java.net.URI;
 public class BasicCRUDRest{
 
     public static void main(String[] args) throws IOException {
+		int PORT=9998;
         System.out.println("Start");
-        URI baseUri = UriBuilder.fromUri("http://localhost/").port(9998).build();
-        ResourceConfig config = new ResourceConfig(Rest.class);
-        HttpServer server = GrizzlyHttpServerFactory.createHttpServer(baseUri, config);
+        URI baseUri = UriBuilder.fromUri("http://localhost/").port(PORT).build();
+
+		// Rest.class corresponds to the Rest resource implementation located in Rest.java
+        ResourceConfig resConfig = new ResourceConfig(Rest.class);
+
+        HttpServer server = GrizzlyHttpServerFactory.createHttpServer(baseUri, resConfig);
 
         System.out.println(" Press ENTER to stop ");
         System.in.read();
