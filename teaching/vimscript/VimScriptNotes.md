@@ -4,5 +4,7 @@
 
 
 | Cmd   |  Description or  example |
-| -------- | --- |
+| --- | --- |
 | echo  |  :echo "hooo"            |
+| help  | :help echo |
+
