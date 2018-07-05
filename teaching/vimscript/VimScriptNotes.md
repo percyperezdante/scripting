@@ -1,5 +1,6 @@
 # VimScript
 
+This is a summary from [http://learnvimscriptthehardway.stevelosh.com/](VimScript)
 1. Summary
 
 
