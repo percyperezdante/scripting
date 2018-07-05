@@ -3,8 +3,11 @@
 1. Summary
 
 
-| Cmd   |  Description or  example |
-| --- | --- |
-| echo  |  :echo "hooo"            |
-| help  | :help echo |
+| Cmd   |  Description |  example |
+| --- | --- | --- |
+| help  | Help | :help echo |
+| echo  | Display message |  :echo "hooo" |
+| echom  | Display and save message, debugging |  :echom "hooo" |
+| messages  | Display all saved message, debugging |  :messages |
+| " | Comments | "this is comment |
 
