@@ -1,5 +1,14 @@
 # Red Hat Enterprise notes
 
+## Version
+
+- Get the version of Red Hat
+
+```
+cat /etc/redhat-release
+```
+
+
 ## File system
 
 - Password /etc/passwd file
