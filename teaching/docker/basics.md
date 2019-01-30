@@ -15,3 +15,8 @@
 
 ```
 
+
+## Pending 
+
+- How to read from a File environment variables?
+-
