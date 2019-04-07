@@ -1,0 +1,32 @@
+version: '3.3'
+services:
+    web:
+        build: 
+            context: .     # Either a path to a directory containing a Dockerfile, or a url to a git repository
+            dockerfile: Dockerfile.web  # Compose uses an alternate file to build with. A build path must also be specified.
+            args:
+                myVersion: 1    
+                homePath: /home/percy
+            labels:
+                com.web.me: "hiihi"
+
+        ports:
+            - "5000:5000"  # Either specify both ports (HOST:CONTAINER), or just the container port (an ephemeral host port is chosen).
+
+    redis:
+        image: ubuntu:bionic 
+        tty: true
+        command: ["ls"]
+        env_file: web.env_file
+
+
+    percy:
+        image: debian:9.8
+        tty: true
+        tmpfs: /myTemp # Mount a temporary file system inside the container. Can be a single value or a list.
+
+# 
+# Reference 
+# https://docs.docker.com/compose/compose-file/
+# 
+#
