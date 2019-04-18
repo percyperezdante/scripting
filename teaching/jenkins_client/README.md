@@ -208,7 +208,21 @@ And you should get something such:
 
 ```
 
+# How to run groovy scripts
+
+To run a groovy script directly in Jenkins master:
+```
+$ java -jar /path/to/jenkins-cli.jar -s http://hostname:8080/jenkins -auth @/hidden/directory/.secrets groovy = < my_script.groovy
+```
+
+In here :
+
+- groovy  is a subcommand from jenkins-cli.jar
+- "=" instructs jenkins-cli.jar to expect stdin to provide a script to run
+- "<" feeds the contentof the groovy script to jenkins-cli.jar
+
+
 # References
 - https://jenkins.io/doc/book/managing/cli/
--
+- https://xanderx.com/post/run-jenkins-script-console-scripts-from-command-line-without-remoting/
 
