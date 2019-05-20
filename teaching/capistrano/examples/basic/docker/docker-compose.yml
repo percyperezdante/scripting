@@ -1,0 +1,38 @@
+version: '3.4'
+
+networks:
+  capistranonet:
+    ipam:
+      config:
+        - subnet: 172.18.5.0/24
+
+services:
+    server1:
+        container_name: server1 
+        hostname: server1 
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+        ports:
+            - 8080:8080
+            - 50000:50000
+        volumes:
+            - ./shared:/tmp/shared
+        tty: true
+        networks:
+            capistranonet:
+               ipv4_address: 172.18.5.2
+             
+    server2:
+        container_name: server2 
+        hostname: server2 
+        build:
+            context: .
+            dockerfile: ./Dockerfile
+        ports:
+            - 8080:8080
+            - 50000:50000
+        tty: true
+        networks:
+            capistranonet:
+               ipv4_address: 172.18.5.3

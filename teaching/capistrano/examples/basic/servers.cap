@@ -1,0 +1,4 @@
+# centos6 server : TEST env
+server "172.10.10.2", :all, {:group => 1}
+server "172.10.10.3", :all, {:group => 1}
+

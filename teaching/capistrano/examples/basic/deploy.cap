@@ -1,0 +1,31 @@
+#  
+# How to run:
+#
+# cap -f deploy.cap deploy
+#
+# References:
+#
+# http://ruby-for-beginners.rubymonstas.org/built_in_classes/hashes.html
+#
+
+require 'yaml'
+load :file => "config.cap"
+load :file => "servers.cap"
+
+begin
+  namespace :deploy do
+    desc "Installation and configuration"
+    task :default do
+       puts "file name #{d}"
+       extract_value 
+    end
+  end
+end
+
+def extract_value
+   puts "  s  #{config_data['DOCKER_PUSH_HOST']}"
+   run "echo hi"
+   run "echo hi"
+   run "echo hi > /home/deploy/test"
+end
+

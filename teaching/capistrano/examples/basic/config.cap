@@ -1,0 +1,9 @@
+set :d, "18.03.1"
+set :user, 'deploy'
+
+set :config_data, {
+    'DOCKER_PUSH_HOST' => "nexus_dockerpush_host",
+    'DOCKER_PULL_HOST' => "nexus_dockerpull_host",
+    'JENKINS_URL' => "https://build.diginsite.net"
+}
+
