@@ -16,11 +16,22 @@
 
 ```
 
+## When docker exits ?
+
+Docker will exit once  a main process  finishes.  For example when Dockerfile 
+contains a shell scripts, docker will exit and stop the container as soon
+as the shell scripts finishes. Therefore, when a container exits, you can 
+target shell scripts or another applications and comment them to debug
+the Dockerfile.
+
+
 
 ## Pending 
 
 - How to read from a File environment variables?
 -
+
+
 
 # Docker inspect format
 
