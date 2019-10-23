@@ -1,5 +1,5 @@
 package main
 
-func mainh(){
+func main() {
 	println("Hallo")
 }
